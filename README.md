@@ -21,6 +21,12 @@ Our application is built with security and scalability in mind, making it the pe
 * Clone the repository
 * run the command `mvn spring-boot:run` in the root directory
 
+## Screenshots
+
+* 1000$ transfer order initiated by a user with id 4 (previous balance was equal to 2000$)
+![image](https://user-images.githubusercontent.com/87483058/214409429-38946c8c-7298-47a6-a28d-6d6a2e97d47f.png)
+
+
 ### Note
 
 <em>Please note that this application is for demonstration purposes only and should not be used for real-world financial transactions.</em>

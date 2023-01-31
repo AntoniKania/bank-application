@@ -1,14 +1,9 @@
 package com.example.s29400bank;
 
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
 
-@RestController
 @Component
 public class BankService {
     private final UserStorage userStorage;
@@ -17,13 +12,7 @@ public class BankService {
         this.userStorage = userStorage;
     }
 
-    @GetMapping("/")
-    public String returnStatus() {
-        return "ok";
-    }
-
-    @GetMapping("/user/{clientId}")
-    public UserInfo getUserInfo(@PathVariable Integer clientId) {
+    public UserInfo getUserInfo(Integer clientId) {
         Optional<User> user = userStorage.findUserById(clientId);
         if (user.isEmpty()) {
             return null;
@@ -31,15 +20,13 @@ public class BankService {
         return new UserInfo(user.get().getName(), user.get().getBalance());
     }
 
-    @PostMapping("/user/{clientName}/{balance}")
-    public Integer registerClient(@PathVariable String clientName, @PathVariable Integer balance) {
+    public Integer registerClient(String clientName, Integer balance) {
         Integer id = userStorage.getUserList().size() + 1;
         userStorage.addUser(new User(id, clientName, balance));
         return id;
     }
 
-    @PostMapping("/deposit/{clientId}/{amount}")
-    public OrderInfo depositOrder(@PathVariable Integer clientId, @PathVariable Integer amount) {
+    public OrderInfo depositOrder(Integer clientId, Integer amount) {
         Optional<User> user = userStorage.findUserById(clientId);
         if (user.isEmpty()) {
             return new OrderInfo(Status.DECLINE, 0, "Client don't exist in database");
@@ -49,8 +36,7 @@ public class BankService {
         return new OrderInfo(Status.ACCEPTED, user.get().getBalance(), "");
     }
 
-    @PostMapping("/transfer/{clientId}/{amount}")
-    public OrderInfo transferOrder(@PathVariable Integer clientId, @PathVariable Integer amount) {
+    public OrderInfo transferOrder(Integer clientId, Integer amount) {
         Optional<User> user = userStorage.findUserById(clientId);
 
         if (user.isEmpty()) {

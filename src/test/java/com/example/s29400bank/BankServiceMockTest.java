@@ -68,17 +68,12 @@ class BankServiceMockTest {
 
     @Test
     void successGetUserInfo() {
+        //given
+        User user = new User(1, "John", 2000);
         //when
-        Integer id = bankService.registerClient("name", 2000);
-        UserInfo userInfo = bankService.getUserInfo(id);
+        when(userStorage.findUserById(any())).thenReturn(Optional.of(user));
+        UserInfo userInfo = bankService.getUserInfo(any());
         //then
-        assertThat(userInfo.getName()).isEqualTo("name");
+        assertThat(userInfo.getName()).isEqualTo("John");
     }
-
-    @Test
-    void successfulClientRegistration() {
-
-    }
-
-
 }

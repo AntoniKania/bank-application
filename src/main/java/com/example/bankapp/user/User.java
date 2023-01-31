@@ -1,8 +1,8 @@
-package com.example.s29400bank;
+package com.example.bankapp.user;
 
 public class User {
     private final Integer id;
-    private String name;
+    private final String name;
     private Integer balance;
 
     public User(Integer id, String name, Integer balance) {

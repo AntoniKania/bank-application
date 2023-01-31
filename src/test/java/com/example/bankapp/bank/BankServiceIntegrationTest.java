@@ -1,21 +1,19 @@
-package com.example.s29400bank;
+package com.example.bankapp.bank;
 
+import com.example.bankapp.user.UserInfo;
+import com.example.bankapp.user.UserStorage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-public class BankServiceIntegrationTest {
+class BankServiceIntegrationTest {
 
     @Autowired
     private BankService bankService;
-
-    @MockBean
-    private UserStorage userStorage;
 
     @BeforeEach
     void setup() {

@@ -1,4 +1,4 @@
-package com.example.s29400bank;
+package com.example.bankapp.common;
 
 public class OrderInfo {
     private final Status status;

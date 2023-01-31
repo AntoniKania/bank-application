@@ -1,11 +1,13 @@
-package com.example.s29400bank;
+package com.example.bankapp.bank;
 
+import com.example.bankapp.user.UserInfo;
+import com.example.bankapp.user.UserStorage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BankServiceTest {
+class BankServiceTest {
 
     private BankService bankService;
 

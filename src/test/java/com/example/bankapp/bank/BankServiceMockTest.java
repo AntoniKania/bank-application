@@ -1,5 +1,10 @@
-package com.example.s29400bank;
+package com.example.bankapp.bank;
 
+import com.example.bankapp.common.OrderInfo;
+import com.example.bankapp.common.Status;
+import com.example.bankapp.user.User;
+import com.example.bankapp.user.UserInfo;
+import com.example.bankapp.user.UserStorage;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

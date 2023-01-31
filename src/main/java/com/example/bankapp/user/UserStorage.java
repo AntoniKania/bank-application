@@ -1,4 +1,4 @@
-package com.example.s29400bank;
+package com.example.bankapp.user;
 
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.example.s29400bank;
+package com.example.bankapp.user;
 
 public class UserInfo {
     private final String name;

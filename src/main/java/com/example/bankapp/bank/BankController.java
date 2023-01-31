@@ -1,5 +1,7 @@
-package com.example.s29400bank;
+package com.example.bankapp.bank;
 
+import com.example.bankapp.common.OrderInfo;
+import com.example.bankapp.user.UserInfo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;

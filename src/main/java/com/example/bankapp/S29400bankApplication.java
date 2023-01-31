@@ -1,4 +1,4 @@
-package com.example.s29400bank;
+package com.example.bankapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

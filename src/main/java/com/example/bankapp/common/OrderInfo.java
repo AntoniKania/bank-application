@@ -2,11 +2,10 @@ package com.example.bankapp.common;
 
 public class OrderInfo {
     private final Status status;
-    private final Integer balance;
-
+    private final Double balance;
     private final String message;
 
-    public OrderInfo(Status status, Integer balance, String message) {
+    public OrderInfo(Status status, Double balance, String message) {
         this.status = status;
         this.balance = balance;
         this.message = message;
@@ -21,7 +20,7 @@ public class OrderInfo {
         return status;
     }
 
-    public Integer getBalance() {
+    public Double getBalance() {
         return balance;
     }
 

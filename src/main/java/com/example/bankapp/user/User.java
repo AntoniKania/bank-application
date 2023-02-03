@@ -1,25 +1,25 @@
 package com.example.bankapp.user;
 
 public class User {
-    private final Integer id;
+    private final Long id;
     private final String name;
-    private Integer balance;
+    private Double balance;
 
-    public User(Integer id, String name, Integer balance) {
+    public User(Long id, String name, Double balance) {
         this.id = id;
         this.name = name;
         this.balance = balance;
     }
 
-    public void decreaseBalance(Integer amount) {
+    public void decreaseBalance(Double amount) {
         balance -= amount;
     }
 
-    public void increaseBalance(Integer amount) {
+    public void increaseBalance(Double amount) {
         balance += amount;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
@@ -27,7 +27,7 @@ public class User {
         return name;
     }
 
-    public Integer getBalance() {
+    public Double getBalance() {
         return balance;
     }
 }

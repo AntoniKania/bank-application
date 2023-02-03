@@ -23,7 +23,7 @@ Our application is built with security and scalability in mind, making it the pe
 
 ## Screenshots
 
-* 1000$ transfer order initiated by a user with id 4 (previous balance was equal to 2000$)
+* 1000$ transfer order initiated by a user with id 4 (previous balance was equal to 2000d$)
 ![image](https://user-images.githubusercontent.com/87483058/214409429-38946c8c-7298-47a6-a28d-6d6a2e97d47f.png)
 
 

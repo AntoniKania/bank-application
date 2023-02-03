@@ -21,22 +21,22 @@ public class BankController {
     }
 
     @GetMapping("/user/{clientId}")
-    public UserInfo getUserInfo(@PathVariable Integer clientId) {
+    public UserInfo getUserInfo(@PathVariable Long clientId) {
         return bankService.getUserInfo(clientId);
     }
 
     @PostMapping("/user/{clientName}/{balance}")
-    public Integer registerClient(@PathVariable String clientName, @PathVariable Integer balance) {
+    public Long registerClient(@PathVariable String clientName, @PathVariable Double balance) {
         return bankService.registerClient(clientName, balance);
     }
 
     @PostMapping("/deposit/{clientId}/{amount}")
-    public OrderInfo depositOrder(@PathVariable Integer clientId, @PathVariable Integer amount) {
+    public OrderInfo depositOrder(@PathVariable Long clientId, @PathVariable Double amount) {
         return bankService.depositOrder(clientId, amount);
     }
 
     @PostMapping("/transfer/{clientId}/{amount}")
-    public OrderInfo transferOrder(@PathVariable Integer clientId, @PathVariable Integer amount) {
+    public OrderInfo transferOrder(@PathVariable Long clientId, @PathVariable Double amount) {
         return bankService.transferOrder(clientId, amount);
     }
 }

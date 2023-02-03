@@ -2,9 +2,9 @@ package com.example.bankapp.user;
 
 public class UserInfo {
     private final String name;
-    private final Integer balance;
+    private final Double balance;
 
-    public UserInfo(String name, Integer balance) {
+    public UserInfo(String name, Double balance) {
         this.name = name;
         this.balance = balance;
     }
@@ -13,7 +13,7 @@ public class UserInfo {
         return name;
     }
 
-    public Integer getBalance() {
+    public Double getBalance() {
         return balance;
     }
 }

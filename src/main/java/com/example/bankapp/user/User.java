@@ -1,8 +1,17 @@
 package com.example.bankapp.user;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class User {
-    private final Long id;
-    private final String name;
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long id;
+    private String name;
     private Double balance;
 
     public User(Long id, String name, Double balance) {
@@ -10,6 +19,8 @@ public class User {
         this.name = name;
         this.balance = balance;
     }
+
+    protected User() {}
 
     public void decreaseBalance(Double amount) {
         balance -= amount;
